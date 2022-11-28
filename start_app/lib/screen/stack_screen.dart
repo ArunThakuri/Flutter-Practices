@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import '../util/strings.dart';
 
@@ -12,12 +13,20 @@ class StackScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Stack(
         children: [
-          Image.network(
-            imageUrl,
+          CachedNetworkImage(
+            imageUrl: imageUrl,
+            placeholder: (context, url) => CircularProgressIndicator(),
+            errorWidget: (context, url, error) => Icon(Icons.error),
             fit: BoxFit.cover,
             height: screenHeight,
             width: screenWidth,
           ),
+          // Image.network(
+          //   imageUrl,
+          //   fit: BoxFit.cover,
+          //   height: screenHeight,
+          //   width: screenWidth,
+          // ),
           Container(color: Colors.red.withOpacity(0.3)),
 
           Align(

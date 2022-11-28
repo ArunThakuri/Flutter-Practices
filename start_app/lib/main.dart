@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:start_app/screen/container_screen.dart';
-import 'package:start_app/screen/row_and_column_screen.dart';
-import 'package:start_app/screen/stack_screen.dart';
+// import 'package:start_app/screen/Container1.dart';
+import 'package:start_app/screen/Tiktok_screen.dart';
+// import 'package:start_app/screen/container_screen.dart';
+// import 'package:start_app/screen/facebook.dart';
 
-import 'screen/home_page.dart';
-import 'screen/ig_post_screen.dart';
+// import 'screen/ig_post_screen.dart';
+// import 'package:start_app/screen/container_screen.dart';
+// import 'package:start_app/screen/row_and_column_screen.dart';
+// import 'package:start_app/screen/stack_screen.dart';
+
+// import 'screen/home_page.dart';
+// import 'screen/ig_post_screen.dart';
 
 void main() {
   runApp(OurApp());
@@ -16,7 +22,7 @@ class OurApp extends StatelessWidget {
     return new MaterialApp(
       title: "Our App",
       theme: ThemeData(primarySwatch: Colors.purple, textTheme: TextTheme()),
-      home: StackScreen(),
+      home: TikTok(),
     ); // most important widget for the app
   }
 }
